@@ -5,11 +5,25 @@
      "browser": true,
      "jest": true
   },
-  "rules": {
-    "no-restricted-syntax": [
+  "rules": {  
+	"no-restricted-syntax": [
       "error",
       "LabeledStatement",
-      "WithStatement"
-    ]
+      "WithStatement",
+		"ignoreRestSiblings"
+    ],
+	"no-unused-vars": [
+		"error", {
+		  "varsIgnorePattern": "unused",
+		  "vars": "all",
+		  "args": "all",
+		  "ignoreRestSiblings": false
+		}
+	],
+	 "no-console": [
+		"error", {
+			"allow": ["log"]
+		}
+	]
   }
 }
